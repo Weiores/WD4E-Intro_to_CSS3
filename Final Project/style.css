@@ -192,12 +192,7 @@ img.styled:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-@media (max-width: 900px) {
-  .destination-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .destination-grid { grid-template-columns: 1fr; }
-}
+
 
 .dest-card {
   background: var(--clr-white);
@@ -271,9 +266,7 @@ img.styled:hover {
   gap: 3rem;
   align-items: center;
 }
-@media (max-width: 700px) {
-  .about-grid { grid-template-columns: 1fr; }
-}
+
 .about-text h2 {
   font-family: var(--ff-display);
   font-size: clamp(1.5rem, 3vw, 2rem);
@@ -289,9 +282,7 @@ img.styled:hover {
   gap: 1.25rem;
   margin-top: 1.5rem;
 }
-@media (max-width: 600px) {
-  .tips-list { grid-template-columns: 1fr; }
-}
+
 .tip-item {
   background: var(--clr-white);
   border-left: 4px solid var(--clr-accent);
@@ -314,3 +305,34 @@ img.styled:hover {
 }
 .site-footer a { color: var(--clr-accent); }
 .site-footer a:hover { text-decoration: underline; }
+
+/* Tablet View (772px and up)*/
+@media screen and (min-width: 772px) {
+
+    /* Make each gallery item/div 45% of the viewport width */
+    .gallery-item {
+        width: 45vw;
+        max-width: none;
+        flex: 0 0 45vw;
+    }
+
+    /* Images should be 30% of viewport height */
+    .gallery-item img,
+    img.styled {
+        max-height: 30vh;
+        object-fit: cover;
+    }
+
+}
+
+/* Large Screen View (998px and up)*/
+@media screen and (min-width: 998px) {
+
+    /* Make each gallery item/div 30% of the viewport width */
+    .gallery-item {
+        width: 30vw;
+        max-width: none;
+        flex: 0 0 30vw;
+    }
+
+}
